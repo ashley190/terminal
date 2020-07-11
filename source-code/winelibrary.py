@@ -14,9 +14,10 @@ codes = {
     "W2R7DSRV" : ["Pinot Noir", "Pinot Gris", "Sauvignon Blanc"]
 }
 
-# wines = {
-#     "Pinot Noir": {"Description":}
-# }
+wines = {
+    "Pinot Noir": {"Description":}
+}
+
 Reasons = {
     "W1" - "For my own enjoyment"
     "W2" - "For others"
