@@ -3,17 +3,17 @@
 ### Statement of Purpose and Scope
 
 #### Objective
-The main objective of this application make wine type selection more approachable by selecting appropriate type(s) of wine based on a user's circumstances. Suitable of wine can be tailored to reasons such as cooking/pairing with food, social drinking, solo drinking or celebratory drinking. Selection is adapted from [Wine Folly's Flowchart](https://media.winefolly.com/how-to-choose-wine-infographic.png#fullsize). 
+The main objective of this application make wine type selection more approachable by selecting appropriate type(s) of wine based on a user's circumstances. Suitable of wine can be tailored to reasons such as cooking/pairing with food, social drinking, solo drinking or celebratory drinking etc. Selection flow is adapted from [Wine Folly's Flowchart](https://media.winefolly.com/how-to-choose-wine-infographic.png#fullsize). 
 
 #### Target Audience
 The intended target audience of this application is for people who:-
 * enjoys the occasional bottle/glass of wine
-* does not have much knowledge about wines but care enough to have something suitable for the occasion
+* does not have much knowledge about wines but wants to have something suitable certain occasions
 * does not have access to a personal sommelier
 * need help selecting wine for different preferences or circumstances
 
 #### Problems addressed
-This application is intended to educate and assist in selecting appropriate wines for any occasion akin to having a personal digital sommelier. This will help reduce anxiety or feelings of inadequacy for someone who don't consider themself wine literate but would like to still select appropriate wine for certain settings. 
+This application is intended to educate and assist in selecting appropriate wines for any occasion akin to having a personal digital sommelier. This will help reduce anxiety or feelings of inadequacy for someone who don't consider themself a connoisseur but would still like to select appropriate wine for certain settings. 
 
 #### User Interaction and Experience
 User will interface with the application using basic commands within the command shell. The application will prompt user for a name at the beginning and will guide user through the decision making process by presenting options which user will select at every stage making it an interactive process. At the end of the process, user will be presented with the best type of wine that suits the options entered. 
@@ -35,3 +35,8 @@ For the purposes of this project, a minimum viable product will have the followi
 5. Suggest potential alternatives if user does not like options presented
  
 ### Application Control Flow Diagram
+![Wine selection control flow](<<link>>)
+
+
+### Resources/References
+1. Winefolly.com. https://media.winefolly.com/how-to-choose-wine-infographic.png#fullsize. Published 2020. Accessed July 10, 2020.
