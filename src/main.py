@@ -117,7 +117,6 @@ elif for_whom == "2":
         code += ["R7"]
         deserving = valid_y_n(input("Are they good people deserving of wine?\n(y/n)"))
         if deserving == "y":
-            code += ["DSRV"]
             know = valid_y_n(input("Do you know what they like?\n(y/n)"))
             if know == "y":
                 code += ["KNOW"]
@@ -134,12 +133,9 @@ elif for_whom == "2":
 
 purpose_statement = f"{name} " + match_code(code, purpose)
 print(purpose_statement)
-print("""Thinking.....
-...
-...
-...
-""")
+print("Thinking.....")
 
-print(match_code(code, wine_list))
+wine_selection = match_code(code, wine_list)
+
 
 print("Wine Assistant exited")
