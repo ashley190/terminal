@@ -51,7 +51,16 @@ if who_for == "W2":
 summary = f"{name} {purpose[code[-1]]}"
 print(summary)
 
-for value in wine_list[code[-1]]:
-    print(f"{value}" : 
+search = wine_list[code[-1]]
+print(search)
+print(description[search[0]][0])
+
+# for value in search:
+#     print(f"""
+#     {value}
+#     Description: {description[value[0]]}
+#     Food pairing: {description[value[1]]}
+#     Alternative(s): {description[value[2]]}
+#     """)
         
 
