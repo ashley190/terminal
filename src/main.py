@@ -3,15 +3,13 @@ from winelibrary import *
 import sys
 
 # verify age and get name
-# print(welcome)
-# check_age()
-# name = name()
-# print(f"Thank you, {name}. Let's select some wine!\n")
+print(welcome)
+check_age()
+name = name()
+print(f"Thank you, {name}. Let's select some wine!\n")
 code = []
 
 who_for =  select("W")
-print("")
-#wine selection
 if who_for == "W1":
     reason = select("R")
     code.append(reason)
@@ -52,15 +50,20 @@ summary = f"{name} {purpose[code[-1]]}"
 print(summary)
 
 search = wine_list[code[-1]]
-print(search)
-print(description[search[0]][0])
 
-# for value in search:
-#     print(f"""
-#     {value}
-#     Description: {description[value[0]]}
-#     Food pairing: {description[value[1]]}
-#     Alternative(s): {description[value[2]]}
-#     """)
+for value in search:
+    try:
+        print(f"""
+{value}
+Description: 
+{description[value][0]}
+Food pairing: 
+{description[value][1]}
+Alternative(s): 
+{description[value][2]}
+""")
+    except KeyError:
+        print(value)
+
         
 

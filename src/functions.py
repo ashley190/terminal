@@ -38,9 +38,10 @@ def select(key):
     return selection
 
 def valid_y_n(x):
+    x = x.lower()
     valid_entries = {"y", "n"}
-    while x.lower() not in valid_entries:                                                                                           
-        x = input("Please enter 'y' or 'n'.\n(y/n) ")
+    while x not in valid_entries:                                                                                           
+        x = input("Please enter 'y' or 'n'.\n(y/n) ").lower()
     return x
 
 def valid(x, y):

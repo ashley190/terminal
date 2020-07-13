@@ -33,14 +33,14 @@ wine_list = {
     "D2" : ["Cabernet Sauvignon", "Sauvignon Blanc"],
     "D3" : ["Sangiovese/Grenache", "Cotes du Rhone", "Cabernet Sauvignon"],
     "S" : ["I would suggest talking to the sommelier/your connoiseur friend."],
-    "R3" : ["Bubbly", "Sparkling wine", "Riesling, Merlot", "Pinot Noir"],
+    "R3" : ["Sparkling wine/Champagne", "Riesling, Merlot", "Pinot Noir"],
     "R4" : ["Malbec", "Cabernet Franc", "Chardonnay"],
     "R5" : ["Bordeaux", "Burgundy", "Rioja", "Riesling", "Pinot Noir", "Shiraz", "Malbec"],
     "OLD" : ["Bordeaux", "Burgundy", "Rioja"],
     "NEW" : ["Riesling", "Pinot Noir", "Shiraz", "Malbec"],
-    "C1" : ["Cleanskin", "Pick a random bottle suited to your budget with a fancy label"], 
+    "C1" : ["Cleanskin"], 
     "C2" : ["Red blend", "Pinot Noir"],
-    "R7" : ["Cleanskin", "Pick a random bottle suited to your budget with a fancy label"],
+    "R7" : ["Cleanskin"],
     "KNOW": ["I would suggest buying a bottle of his/her favorite type within your budget."],
     "DONTKNOW" : ["Pinot Noir", "Pinot Grigio/Gris", "Sauvignon Blanc"]
     }
@@ -89,5 +89,5 @@ Rich, Creamy and Nutty are more expensive to make and thus is reflected in their
 
     "Boxed wine" : ["Wine packaged in a box. This is an inexpensive and more environmentally friendly option. Wine can be consumed within 3-4 weeks after opening as it is less susceptible to oxidation but will recommend consuming within the shelf life indicated by the manufacturer. Just like not all bottled wines are good, the same analogy can be applied to say that not all boxed wine are bad so it is perfectly acceptable as a go to for inexpensive, larger volume consumption.", "", ""],
 
-    "Cleanskin" : ["Wine whose lable does not indicate the winery or winemaker's name but rather only show the grape variety and year of bottling. They are typically sold at a lower price. Cleanskin wines can be originally branded wines sold at a higher price and relabelled as cleanskins or wine specifically made to be sold as cleanskins and therefore the quality of cleanskin wines can vary significantly. So take a pick - there can be an occasional gem in there somewhere.", "", ""]
+    "Cleanskin" : ["Wine whose lable does not indicate the winery or winemaker's name but rather only show the grape variety and year of bottling. They are typically sold at a lower price. Cleanskin wines can be originally branded wines sold at a higher price and relabelled as cleanskins or wine specifically made to be sold as cleanskins and therefore the quality of cleanskin wines can vary significantly. So take a pick - there can be an occasional gem in there somewhere.", "", "Pick a random bottle suited to your budget with a fancy label if you're worried about looking cheap."]
 }
