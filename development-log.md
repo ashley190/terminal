@@ -6,4 +6,5 @@ Jul 13 -    Completed wine description library.
             Realised that I forgot to check for legal age. Added this new feature at the beginning that causes program to exit if user below legal drinking age.
             Worked on keeping code DRY - shortened feature two control flow in main.py from 100 lines to 35 lines! Pretty proud!
 Jul 14 -    Worked on options to navigate backwards in feature 2. Rewrote control flow into while loop and moved into a function. Works!
-            Tried implementing curses for select options for feature 2; too complex - put into future versions?
+            Tried implementing curses for select options for feature 2; will pass assignment due by the time I figure this out - perhaps in version 2?
+Jul 15 -    Combined purpose and wine list in winelibrary.py

@@ -11,24 +11,20 @@ import sys
 code = code_gen()
 print(code)
 
-# summary = f"{name} {purpose[code[-1]]}"
-# print(summary)
+reason = summary[code[-1]]["Reason"]
+print(f"{name} {reason}")
 
-# search = wine_list[code[-1]]
+wine_list = summary[code[-1]]["Wines"]
 
-# for value in search:
-#     try:
-#         print(f"""
-# {value}
-# Description: 
-# {description[value][0]}
-# Food pairing: 
-# {description[value][1]}
-# Alternative(s): 
-# {description[value][2]}
-# """)
-#     except KeyError:
-#         print(value)
+for value in wine_list:
+    try:
+        print(f"""
+{value}
+{"Description:":<18}{description[value][0]:<10}
+{"Food pairing:":<18}{description[value][1]:<10}
+{"Alternative(s):":<18}{description [value][2]:<10}
+        """)
+    except KeyError:
+        print(value)
 
-        
 

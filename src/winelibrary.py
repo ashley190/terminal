@@ -7,44 +7,72 @@ options = {
     "C" : ["How much do you care about said dinner party?", "1 - Not at all. Just a courtesy bottle.", "2 - A little bit/much more than option 1"]
 }
 
-purpose = {
-    "R1" : "is looking for wine suitable for drinking solo.", 
-    "BW" : "is happy with boxed wine.",
-    "NBW" : "is looking for wine suitable for a simple dinner at home.",
-    "D2" : "is looking for wine suitable for cooking and drinking.",
-    "NS" : "is dining out somewhere nice.",
-    "S" : "is dining out someplace with a sommelier or with a wine connoiseur friend.",
-    "R3" : "is looking for something suitable for a celebration.",
-    "R4" : "is looking for something suitable for regular drinking.",
-    "ONW3" : "is looking for something to age but impartial to old/new world wines.",
-    "ONW1" : "is looking for old world wines for cellaring.",
-    "ONW2" : "is looking for new world wines suitable for ageing.",
-    "C1" : "is looking for wine to bring to a dinner party.",
-    "C2" : "is looking for wine to bring to an important dinner party.",
-    "R7" : "is looking for a gift for an acquaintance.",
-    "KNOW": "wants to gift a bottle to someone close",
-    "DONTKNOW" : "is looking for a special bottle for someone special."
+summary = {
+    "R1" : 
+        {"Reason": "is looking for wine suitable for drinking solo.", 
+        "Wines": ["Pinot Noir", "Sangiovese/Grenache", "Zinfandel", "Shiraz"]}, 
+
+    "BW" : 
+        {"Reason" : "is happy with boxed wine.", 
+        "Wines": ["Boxed wine", "Cleanskin"]},
+
+    "NBW" : {
+        "Reason" : "is looking for wine suitable for a simple dinner at home.",
+        "Wines": ["Pinot Noir", "Sangiovese/Grenache", "Zinfandel/Shiraz"]},
+
+    "D2" : {
+        "Reason" : "is looking for wine suitable for cooking and drinking.", 
+        "Wines": ["Cabernet Sauvignon", "Sauvignon Blanc"]},
+
+    "NS" : {
+        "Reason" : "is dining out somewhere nice.", 
+        "Wines": ["Sangiovese/Grenache", "Cotes du Rhone", "Cabernet Sauvignon"]},
+
+    "S" : {
+        "Reason" : "is dining out someplace with a sommelier or with a wine connoiseur friend.", 
+        "Wines": ["I would suggest talking to the sommelier/your connoiseur friend."]},
+
+    "R3" : {
+        "Reason" : "is looking for something suitable for a celebration.", 
+        "Wines": ["Sparkling wine/Champagne", "Riesling, Merlot", "Pinot Noir"]},
+
+    "R4" : {
+        "Reason" : "is looking for something suitable for regular drinking.", 
+        "Wines": ["Malbec", "Cabernet Franc", "Chardonnay"]},
+
+    "ONW3" : {
+        "Reason" : "is looking for something to age but impartial to old/new world wines.", 
+        "Wines": ["Bordeaux", "Burgundy", "Rioja", "Riesling", "Pinot Noir", "Shiraz", "Malbec"]},
+
+    "ONW1" : {
+        "Reason" : "is looking for old world wines for cellaring.", 
+        "Wines": ["Bordeaux", "Burgundy", "Rioja"]},
+
+    "ONW2" : {
+        "Reason" : "is looking for new world wines suitable for ageing.", 
+        "Wines": ["Riesling", "Pinot Noir", "Shiraz", "Malbec"]},
+
+    "C1" : {
+        "Reason" : "is looking for wine to bring to a dinner party.", 
+        "Wines": ["Cleanskin"]},
+
+    "C2" : {
+        "Reason" : "is looking for wine to bring to an important dinner party.", 
+        "Wines": ["Red blend", "Pinot Noir"]},
+
+    "R7" : {
+        "Reason" : "is looking for a gift for an acquaintance.", 
+        "Wines": ["Cleanskin"]},
+
+    "KNOW": {
+        "Reason" : "wants to gift a bottle to someone close", 
+        "Wines": ["I would suggest buying a bottle of his/her favorite type within your budget."]},
+
+    "DONTKNOW" : {
+        "Reason" : "is looking for a special bottle for someone who matters.", 
+        "Wines": ["Pinot Noir", "Pinot Grigio/Gris", "Sauvignon Blanc"]}
 }
 
-wine_list = {
-    "R1" : ["Pinot Noir", "Sangiovese/Grenache", "Zinfandel", "Shiraz"], 
-    "BW" : ["Boxed wine", "Cleanskin"],
-    "NBW" : ["Pinot Noir", "Sangiovese/Grenache", "Zinfandel/Shiraz"],
-    "D2" : ["Cabernet Sauvignon", "Sauvignon Blanc"],
-    "NS" : ["Sangiovese/Grenache", "Cotes du Rhone", "Cabernet Sauvignon"],
-    "S" : ["I would suggest talking to the sommelier/your connoiseur friend."],
-    "R3" : ["Sparkling wine/Champagne", "Riesling, Merlot", "Pinot Noir"],
-    "R4" : ["Malbec", "Cabernet Franc", "Chardonnay"],
-    "ONW3" : ["Bordeaux", "Burgundy", "Rioja", "Riesling", "Pinot Noir", "Shiraz", "Malbec"],
-    "ONW1" : ["Bordeaux", "Burgundy", "Rioja"],
-    "ONW2" : ["Riesling", "Pinot Noir", "Shiraz", "Malbec"],
-    "C1" : ["Cleanskin"], 
-    "C2" : ["Red blend", "Pinot Noir"],
-    "R7" : ["Cleanskin"],
-    "KNOW": ["I would suggest buying a bottle of his/her favorite type within your budget."],
-    "DONTKNOW" : ["Pinot Noir", "Pinot Grigio/Gris", "Sauvignon Blanc"]
-    }
-#description library = name: [description, foodpairing, good alternatives]
 description = {
     "Pinot Noir" : ["Pinot Noir is a dry, light-bodied red that has a higher acidity and a soft, smooth, low-tannin finish. It is considered a lighter bodied red that is fruity and floral.", "Pinot Noirs are particularly versatile when it comes to food pairing and can go with a variety of food, duck being a particular popular pairing. Other foods can range from white to red meats, dishes with cream sauces and cheese like Gruyere.", "Gamay (Beaujolais)"],
     
