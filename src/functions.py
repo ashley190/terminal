@@ -125,7 +125,7 @@ def code_gen():
             code[-1] = select(code[-1][0])
     return code
 
-def results(code):
+def results(code, name):
     reason = summary[code[-1]]["Reason"]
     purpose = summary[code[-1]]["Purpose"]
     print(f"{name} {reason}")
@@ -133,6 +133,7 @@ def results(code):
     wine_list = summary[code[-1]]["Wines"]
 
     try:
+        print(purpose)
         x = PrettyTable()
         x.field_names = ["Wine", "Description", "Food Pairing", "Alternative(s)"]
         x.align = "l"
@@ -143,7 +144,23 @@ def results(code):
                 x.add_row(["","","",""])
             elif value == wine_list[-1]:
                 x.add_row([f"{value}", f"{description[value][0]}", f"{description[value][1]}", f"{description[value][2]}"])
-        return(x)
+        print(x)
+        return purpose, x
     except KeyError:
-        return(value)
+        return purpose, value
+
+def wine_select(name):
+
+    selections = {}
+    wine_list = 1
+    code = code_gen()
+    selections[wine_list] = results(code, name)
+
+    again = valid_y_n(input("Would you like to select more wine?\n(y/n)").lower(), False)
+    while again == "y": 
+        wine_list += 1
+        code = code_gen()
+        selections[wine_list] = results(code, name)
+        again = valid_y_n(input("Would you like to select more wine?\n(y/n)").lower(), False)
+    return selections
 
