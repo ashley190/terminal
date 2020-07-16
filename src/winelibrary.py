@@ -34,7 +34,7 @@ summary = {
 
     "R3" : {
         "Reason" : "is looking for something suitable for a celebration.", 
-        "Wines": ["Sparkling wine/Champagne", "Riesling, Merlot", "Pinot Noir"]},
+        "Wines": ["Sparkling wine/Champagne", "Riesling", "Merlot", "Pinot Noir"]},
 
     "R4" : {
         "Reason" : "is looking for something suitable for regular drinking.", 

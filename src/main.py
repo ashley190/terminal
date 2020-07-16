@@ -8,9 +8,15 @@ import sys
 # name = name()
 # print(f"Thank you, {name}. Let's select some wine!\n")
 
-wine = 1
-
+selections = {}
+wine_list = 1
 code = code_gen()
-results(code)
+selections[wine_list] = results(code)
 
-another_wine = input("Is there anything else I can help with today?\n(y/n)")
+again = valid_y_n(input("Would you like to select more wine?\n(y/n)").lower(), False)
+while again == "y": 
+    wine_list += 1
+    code = code_gen()
+    selections[wine_list] = results(code)
+    again = valid_y_n(input("Would you like to select more wine?\n(y/n)").lower(), False)
+
