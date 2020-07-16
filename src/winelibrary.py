@@ -51,12 +51,12 @@ summary = {
     "ONW3" : {
         "Reason" : "is looking for something to age but impartial to old/new world wines.", 
         "Purpose": "Wines for ageing.",
-        "Wines": ["Bordeaux", "Burgundy", "Rioja", "Riesling", "Pinot Noir", "Shiraz", "Malbec"]},
+        "Wines": ["Bordeaux/Burgundy", "Rioja", "Riesling", "Pinot Noir", "Shiraz", "Malbec"]},
 
     "ONW1" : {
         "Reason" : "is looking for old world wines for cellaring.", 
         "Purpose": "Old world wines for ageing.",
-        "Wines": ["Bordeaux", "Burgundy", "Rioja"]},
+        "Wines": ["Bordeaux/Burgundy", "Rioja"]},
 
     "ONW2" : {
         "Reason" : "is looking for new world wines suitable for ageing.", 
@@ -80,7 +80,7 @@ summary = {
 
     "KNOW": {
         "Reason" : "wants to gift a bottle to someone close", 
-        "Purpose": "",
+        "Purpose": "I am gifting and I know what the recipient likes",
         "Wines": ["I would suggest buying a bottle of his/her favorite type within your budget."]},
 
     "DONTKNOW" : {

@@ -1,7 +1,5 @@
-import textwrap
+from termcolor import colored, cprint
 
-text = "Pinot Noir is a dry, light-bodied red that has a higher acidity and a soft, smooth, low-tannin finish. It is considered a lighter bodied red that is fruity and floral."
-
-text = textwrap.fill(text, width=70)
-
+text = colored('Hello, World!', 'red', attrs=['underline'])
 print(text)
+# cprint('Hello, World!', 'green', 'on_red')

@@ -157,6 +157,7 @@ def results(code, name):
         print(x)
         return purpose, x
     except KeyError:
+        print(value)
         return purpose, value
 
 def wine_select(name):
