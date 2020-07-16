@@ -3,9 +3,9 @@ from winelibrary import *
 import sys
 
 print(welcome)
-check_age()
-name = name()
-print(f"Thank you, {name}. Let's select some wine!")
+# check_age()
+# name = name()
+# print(f"Thank you, {name}. Let's select some wine!")
 
 selection = wine_select(name)
 

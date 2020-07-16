@@ -37,7 +37,7 @@ def select(key):
     for text in options[key]:
         print(text)
     user_input = valid(input("Select an option: "),len(options[key])-1)
-    if user_input == "b" or user_input == "f":
+    if user_input == "b":
         return user_input
     else:
         selection = key + user_input
@@ -120,9 +120,19 @@ def code_gen():
                 code.append("R7")
             elif deserve == "b":
                 code.pop()
-        elif code[-1] == "b":
-            last_code = code.pop()
-            code[-1] = select(code[-1][0])
+        try:
+            if code[-1] == "b":
+                code.pop()
+                code[-1] = select(code[-1][0])
+        except IndexError:
+            while not code:
+                print("""
+You are at the start of the selection process. 
+You cannot go back any further. 
+Please select a valid option.""")
+                code.append(select("W"))
+                if code[-1] == "b":
+                    code.pop()
     return code
 
 def results(code, name):
@@ -150,7 +160,6 @@ def results(code, name):
         return purpose, value
 
 def wine_select(name):
-
     selections = {}
     wine_list = 1
     code = code_gen()
