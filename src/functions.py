@@ -1,22 +1,22 @@
 import sys
 from winelibrary import *
-from prettytable import PrettyTable, PLAIN_COLUMNS
+from prettytable import PrettyTable
 
 welcome = """
 Welcome to your personal wine assistant. 
 I will help guide you through the often overwhelming process of selecting wine for different situations.
 Here are some basic controls for this application:-
 
-1. When prompted for your input, type in the required information/choices and press "return"/"enter.
-2. Emergency exit: To exit this application, please press 'Ctrl+C'.
-3. To go back to the previous step during the selection process 
+1. When prompted for your input, type in the required information/choices and press "return"/"enter".
+2. To go back to the previous step during the selection process, type in 'b' and press "return"/"enter".
+3. Emergency exit: To exit this application at any time, please press 'Ctrl+C'.
 But before we proceed, please confirm your age.
 """
 
 def check_age(): #age check function
     age = input("Age: ")
     while not age.isnumeric():
-        age = input("Please enter numbers only: ")
+        age = input("Please enter whole numbers only: ")
 
     if int(age) < 18: 
         sys.exit("Come back when you're older. Goodbye!")
@@ -25,12 +25,12 @@ def check_age(): #age check function
 
 def name(): 
     name = input("Enter your name: ")
-    confirm = input(f"Your name is {name}, is that correct?)\n(y/n) ").lower()
+    confirm = input(f"Your name is {name}. Is this correct?)\n(y/n) ").lower()
     confirm = valid_y_n(confirm, False)
 
     while confirm == "n":
-        name = input("What is your name and press 'return/enter' when done.\n")
-        confirm = valid_y_n(input(f"Your name is {name}, is that correct?\n(y/n) ").lower(), False)
+        name = input("Enter your name and press 'return/enter' when done.\n")
+        confirm = valid_y_n(input(f"Your name is {name}. Is this correct?\n(y/n) ").lower(), False)
     return name
 
 def select(key):
