@@ -127,6 +127,7 @@ def code_gen():
 
 def results(code):
     reason = summary[code[-1]]["Reason"]
+    purpose = summary[code[-1]]["Purpose"]
     print(f"{name} {reason}")
 
     wine_list = summary[code[-1]]["Wines"]
@@ -135,7 +136,7 @@ def results(code):
         x = PrettyTable()
         x.field_names = ["Wine", "Description", "Food Pairing", "Alternative(s)"]
         x.align = "l"
-        x._max_width = {"Wine": 20, "Description": 80, "Food Pairing": 30, "Alternative(s)": 20}
+        x._max_width = {"Wine": 20, "Description": 60, "Food Pairing": 30, "Alternative(s)": 20}
         for value in wine_list:
             if value != wine_list[-1]:
                 x.add_row([f"{value}", f"{description[value][0]}", f"{description[value][1]}", f"{description[value][2]}"])

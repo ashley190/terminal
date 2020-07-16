@@ -20,3 +20,4 @@ while again == "y":
     selections[wine_list] = results(code)
     again = valid_y_n(input("Would you like to select more wine?\n(y/n)").lower(), False)
 
+print(selections)

@@ -10,66 +10,82 @@ options = {
 summary = {
     "R1" : 
         {"Reason": "is looking for wine suitable for drinking solo.", 
+        "Purpose": "Wines suitable for solo drinking.",
         "Wines": ["Pinot Noir", "Sangiovese/Grenache", "Zinfandel", "Shiraz"]}, 
 
     "BW" : 
         {"Reason" : "is happy with boxed wine.", 
+        "Purpose": "",
         "Wines": ["Boxed wine", "Cleanskin"]},
 
     "NBW" : {
         "Reason" : "is looking for wine suitable for a simple dinner at home.",
+        "Purpose": "Wines suitable for simple home dinners.",
         "Wines": ["Pinot Noir", "Sangiovese/Grenache", "Zinfandel/Shiraz"]},
 
     "D2" : {
         "Reason" : "is looking for wine suitable for cooking and drinking.", 
+        "Purpose": "Wines suitable for cooking and drinking.",
         "Wines": ["Cabernet Sauvignon", "Sauvignon Blanc"]},
 
     "NS" : {
         "Reason" : "is dining out somewhere nice.", 
+        "Purpose": "Wines suitable for fancy dining.",
         "Wines": ["Sangiovese/Grenache", "Cotes du Rhone", "Cabernet Sauvignon"]},
 
     "S" : {
         "Reason" : "is dining out someplace with a sommelier or with a wine connoiseur friend.", 
+        "Purpose": "",
         "Wines": ["I would suggest talking to the sommelier/your connoiseur friend."]},
 
     "R3" : {
         "Reason" : "is looking for something suitable for a celebration.", 
+        "Purpose": "Suitable celebratory wines.",
         "Wines": ["Sparkling wine/Champagne", "Riesling", "Merlot", "Pinot Noir"]},
 
     "R4" : {
         "Reason" : "is looking for something suitable for regular drinking.", 
+        "Purpose": "Wines suitable for regular drinking.",
         "Wines": ["Malbec", "Cabernet Franc", "Chardonnay"]},
 
     "ONW3" : {
         "Reason" : "is looking for something to age but impartial to old/new world wines.", 
+        "Purpose": "Wines for ageing.",
         "Wines": ["Bordeaux", "Burgundy", "Rioja", "Riesling", "Pinot Noir", "Shiraz", "Malbec"]},
 
     "ONW1" : {
         "Reason" : "is looking for old world wines for cellaring.", 
+        "Purpose": "Old world wines for ageing.",
         "Wines": ["Bordeaux", "Burgundy", "Rioja"]},
 
     "ONW2" : {
         "Reason" : "is looking for new world wines suitable for ageing.", 
+        "Purpose": "New world wines for ageing.",
         "Wines": ["Riesling", "Pinot Noir", "Shiraz", "Malbec"]},
 
     "C1" : {
         "Reason" : "is looking for wine to bring to a dinner party.", 
+        "Purpose": "Wines suitable to bring to a dinner party.",
         "Wines": ["Cleanskin"]},
 
     "C2" : {
         "Reason" : "is looking for wine to bring to an important dinner party.", 
+        "Purpose": "Wines suitable to bring to an important dinner party.",
         "Wines": ["Red blend", "Pinot Noir"]},
 
     "R7" : {
         "Reason" : "is looking for a gift for an acquaintance.", 
+        "Purpose": "Wines suitable for gifting.",
         "Wines": ["Cleanskin"]},
 
     "KNOW": {
         "Reason" : "wants to gift a bottle to someone close", 
+        "Purpose": "",
         "Wines": ["I would suggest buying a bottle of his/her favorite type within your budget."]},
 
     "DONTKNOW" : {
         "Reason" : "is looking for a special bottle for someone who matters.", 
+        "Purpose": "Wines suitable for gifting to someone who matters.",
         "Wines": ["Pinot Noir", "Pinot Grigio/Gris", "Sauvignon Blanc"]}
 }
 
