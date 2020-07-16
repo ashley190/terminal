@@ -8,3 +8,4 @@ Jul 13 -    Completed wine description library.
 Jul 14 -    Worked on options to navigate backwards in feature 2. Rewrote control flow into while loop and moved into a function. Works!
             Tried implementing curses for select options for feature 2; will pass assignment due by the time I figure this out - perhaps in version 2?
 Jul 15 -    Combined purpose and wine list in winelibrary.py
+Jul 16 -    Worked on improving the presentation of the text to a better layout in Feature 2 and Feature 3. Implemented table to display Feature 3. 

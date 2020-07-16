@@ -1,12 +1,15 @@
 import sys
-from winelibrary import options
+from winelibrary import *
+from prettytable import PrettyTable, PLAIN_COLUMNS
 
 welcome = """
 Welcome to your personal wine assistant. 
 I will help guide you through the often overwhelming process of selecting wine for different situations.
 Here are some basic controls for this application:-
+
 1. When prompted for your input, type in the required information/choices and press "return"/"enter.
 2. Emergency exit: To exit this application, please press 'Ctrl+C'.
+3. To go back to the previous step during the selection process 
 But before we proceed, please confirm your age.
 """
 
@@ -121,3 +124,26 @@ def code_gen():
             last_code = code.pop()
             code[-1] = select(code[-1][0])
     return code
+
+def results(code):
+    reason = summary[code[-1]]["Reason"]
+    print(f"{name} {reason} Here are some suitable wines.")
+
+    wine_list = summary[code[-1]]["Wines"]
+
+    try:
+        x = PrettyTable()
+        # x.set_style(PLAIN_COLUMNS)
+        x.field_names = ["Wine", "Description", "Food Pairing", "Alternative(s)"]
+        x.align = "l"
+        x._max_width = {"Wine": 20, "Description": 80, "Food Pairing": 30, "Alternative(s)": 20}
+        for value in wine_list:
+            if value != wine_list[-1]:
+                x.add_row([f"{value}", f"{description[value][0]}", f"{description[value][1]}", f"{description[value][2]}"])
+                x.add_row(["","","",""])
+            elif value == wine_list[-1]:
+                x.add_row([f"{value}", f"{description[value][0]}", f"{description[value][1]}", f"{description[value][2]}"])
+        print(x)
+    except KeyError:
+        print(value)
+

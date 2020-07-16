@@ -8,23 +8,9 @@ import sys
 # name = name()
 # print(f"Thank you, {name}. Let's select some wine!\n")
 
+wine = 1
+
 code = code_gen()
-print(code)
+results(code)
 
-reason = summary[code[-1]]["Reason"]
-print(f"{name} {reason}")
-
-wine_list = summary[code[-1]]["Wines"]
-
-for value in wine_list:
-    try:
-        print(f"""
-{value}
-{"Description:":<18}{description[value][0]:<10}
-{"Food pairing:":<18}{description[value][1]:<10}
-{"Alternative(s):":<18}{description [value][2]:<10}
-        """)
-    except KeyError:
-        print(value)
-
-
+another_wine = input("Is there anything else I can help with today?\n(y/n)")

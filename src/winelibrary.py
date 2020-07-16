@@ -1,10 +1,10 @@
 options = {
-    "W" : ["Are you choosing this for yourself or for someone else?", "1 - wine for myself", "2 - wine for someone else"],
-    "R" : ["Tell me more. Is this for:-", "1 - Drinking solo", "2 - To go with my dinner", "3 - Looking for a celebratory drink", "4 - Just want something suitable for regular drinking", "5 - Looking for something to cellar"],
-    "E" : ["Tell me more. Is this for:-", "1 - A dinner party?", "2 - A gift?"],
-    "D" : ["How fancy is dinner?", "1 - Budget dinner at home/takeout", "2 - Cooking something nice and want something that is good to cook with and drink", "3 - Fancy dinner"],
-    "ONW" : ["Old or New World?", "1 - Old World - I am a traditionalist", "2 - New World - I am a modernist", "3 - Both - I don't discriminate"],
-    "C" : ["How much do you care about said dinner party?", "1 - Not at all. Just a courtesy bottle.", "2 - A little bit/much more than option 1"]
+    "W" : ["\nAre you choosing this for yourself or for someone else?", "1 - wine for myself", "2 - wine for someone else"],
+    "R" : ["\nTell me more. Is this for:-", "1 - Drinking solo", "2 - To go with my dinner", "3 - Looking for a celebratory drink", "4 - Just want something suitable for regular drinking", "5 - Looking for something to cellar"],
+    "E" : ["\nTell me more. Is this for:-", "1 - A dinner party?", "2 - A gift?"],
+    "D" : ["\nHow fancy is dinner?", "1 - Budget dinner at home/takeout", "2 - Cooking something nice and want something that is good to cook with and drink", "3 - Fancy dinner"],
+    "ONW" : ["\nOld or New World?", "1 - Old World - I am a traditionalist", "2 - New World - I am a modernist", "3 - Both - I don't discriminate"],
+    "C" : ["\nHow much do you care about said dinner party?", "1 - Not at all. Just a courtesy bottle.", "2 - A little bit/much more than option 1"]
 }
 
 summary = {
@@ -74,7 +74,7 @@ summary = {
 }
 
 description = {
-    "Pinot Noir" : ["Pinot Noir is a dry, light-bodied red that has a higher acidity and a soft, smooth, low-tannin finish. It is considered a lighter bodied red that is fruity and floral.", "Pinot Noirs are particularly versatile when it comes to food pairing and can go with a variety of food, duck being a particular popular pairing. Other foods can range from white to red meats, dishes with cream sauces and cheese like Gruyere.", "Gamay (Beaujolais)"],
+    "Pinot Noir" : ["Pinot Noir is a dry, light-bodied red that has a higher acidity and a soft, smooth, low-tannin finish. It is considered a lighter bodied red that is fruity and floral.", "Pinot Noirs are particularly versatile when it comes to food pairing and can go with a variety of food, duck being a popular pairing. Other foods can range from white to red meats, dishes with cream sauces and cheese like Gruyere.", "Gamay (Beaujolais)"],
     
     "Sangiovese/Grenache" : ["Sangiovese is Italy's most popular grape primarily used in Chianti. Its characteristics can vary based on region, climate and the winemaking process and therefore its taste can range from rustic to fruity. This is a dry light to medium-bodied red with a high acidity. Meanwhile, Grenache is a rich, flavorful red wine originating from Spain with flavors of strawberries, plum, leather, herb and citrus.", "Sangiovese goes well with pizza and pasta, tomato-based dishes like ragu and osso bucco while Grenache goes well with roasted meats and vegetables.", "Zinfandel"],
     
