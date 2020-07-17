@@ -35,7 +35,7 @@ summary = {
 
     "S" : {
         "Reason" : "is dining out someplace with a sommelier or with a wine connoiseur friend.", 
-        "Purpose": "",
+        "Purpose": "Dining out somewhere with sommelier service/with a connoiseur friend.",
         "Wines": ["I would suggest talking to the sommelier/your connoiseur friend."]},
 
     "R3" : {
@@ -80,7 +80,7 @@ summary = {
 
     "KNOW": {
         "Reason" : "wants to gift a bottle to someone close", 
-        "Purpose": "I am gifting and I know what the recipient likes",
+        "Purpose": "Looking for a gift and know what the recipient likes.",
         "Wines": ["I would suggest buying a bottle of his/her favorite type within your budget."]},
 
     "DONTKNOW" : {
