@@ -45,3 +45,6 @@ The final product has a total of 6 features, 3 of which was not originally plann
 **Feature 4** - An age checking feature that acts as a gatekeeper preventing the use of the application by person(s) under the legal drinking age of 18. 
 **Feature 5** - A move backwards navigational feature incorporated into Feature 2 allowing users to navigate backwards one step at a time all the way back to the first selection step. Users will not be able to proceed beyond the first selection step.
 **Feature 6** - Selection of multiple wines for multiple purposes enabled. All selections will be stored in the application and summarised at the end of all selections. 
+
+### Unimplemented feature
+Curses was explored to generate interactive menus for the selection process but was unable to be implemented and tested within the given timeframe. Perhaps it may be implemented in version 2.
