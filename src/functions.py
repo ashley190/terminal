@@ -13,10 +13,22 @@ Here are some basic controls for this application:-
 But before we proceed, please confirm your age.
 """
 
+def exit(x, continue_txt):
+    if x.lower() == "exit":
+        confirm = valid_y_n(input("Are you sure you want to exit this application?\n(y/n)"))
+        if confirm == "y":
+            sys.exit("Goodbye!")
+        elif confirm == "n":
+            x = input(continue_txt)
+            return x
+    else:
+        return x
+
 def check_age(): #age check function
-    age = input("Age: ")
+    age = exit(input("Age: "),"Please enter your age to continue: ")
+
     while not age.isnumeric():
-        age = input("Please enter whole numbers only: ")
+        age = exit(input("Please enter your age in whole numbers: "), "Please enter your age to continue: ")
 
     if int(age) < 18: 
         sys.exit("Come back when you're older. Goodbye!")
@@ -24,12 +36,14 @@ def check_age(): #age check function
         return
 
 def name(): 
-    name = input("Enter your name: ")
-    confirm = input(f"Your name is {name}. Is this correct?)\n(y/n) ").lower()
+    name = exit(input("Enter your name: "), "Please enter your name to continue: ")
+
+    confirm = input(f"Your name is {name}. Is this correct?\n(y/n) ")
+    confirm = confirm.lower()
     confirm = valid_y_n(confirm, False)
 
     while confirm == "n":
-        name = input("Enter your name and press 'return/enter' when done.\n")
+        name = exit(input("Enter your name: "), "Please enter your name to continue: ")
         confirm = valid_y_n(input(f"Your name is {name}. Is this correct?\n(y/n) ").lower(), False)
     return name
 
@@ -45,7 +59,9 @@ def select(key):
 
 
 def valid(x, y):
-    x.strip()
+    x = x.strip().lower()
+    x = exit(x, "Select an option to continue: ")
+
     options = "(" + f""
     index = range(1, y+1)
     for i in index:
@@ -53,8 +69,8 @@ def valid(x, y):
             options += f"{i}/"
         elif i == len(index):
             options += f"{i})"
-    if x.lower() == "b" or x.lower() == "f":
-        return x.lower()
+    if x == "b":
+        return x
     else: 
         while not x.isnumeric() or x.isspace() or int(x) not in range(1, y+1):
             print("Please enter a valid option")
@@ -62,7 +78,7 @@ def valid(x, y):
         return x
 
 def valid_y_n(x, y=False):
-    x = x.lower()
+    x = x.lower()    
     if y == True:
         valid_entries = {"y", "n", "b"}
         while x not in valid_entries:                                                                                           
@@ -127,9 +143,9 @@ def code_gen():
         except IndexError:
             while not code:
                 print("""
-You are at the start of the selection process. 
-You cannot go back any further. 
-Please select a valid option.""")
+    You are at the start of the selection process. 
+    You cannot go back any further. 
+    Please select a valid option.""")
                 code.append(select("W"))
                 if code[-1] == "b":
                     code.pop()
@@ -166,11 +182,15 @@ def wine_select(name):
     code = code_gen()
     selections[wine_list] = results(code, name)
 
-    again = valid_y_n(input("Would you like to select more wine?\n(y/n)").lower(), False)
+    again = exit(input("Would you like to select more wine?\n(y/n)"), "Would you like to select more wine?\n(y/n)")
+    again = again.lower()
+    again = valid_y_n(again, False)
     while again == "y": 
         wine_list += 1
         code = code_gen()
         selections[wine_list] = results(code, name)
-        again = valid_y_n(input("Would you like to select more wine?\n(y/n)").lower(), False)
+        again = exit(input("Would you like to select more wine?\n(y/n)"), "Would you like to select more wine?\n(y/n)")
+        again = again.lower()
+        again = valid_y_n(again, False)
     return selections
 
