@@ -1,3 +1,5 @@
+#!/usr/sbin/python
+
 from functions import *
 from winelibrary import *
 import sys
