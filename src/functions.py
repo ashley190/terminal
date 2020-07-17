@@ -9,7 +9,8 @@ text_3 = colored("exit", 'blue', attrs=['bold', 'underline'])
 text_4 = colored("y", 'blue', attrs=['bold', 'underline'])
 text_5 = colored("n", 'blue', attrs=['bold', 'underline'])
 
-about_txt = f"""Application: The Personal Wine Assistant
+about_txt = f"""
+    Application: The Personal Wine Assistant
     Creator: Ashley Lam
     Purpose: To help users select appropriate wines for appropriate occasions
     Conditions: No access for persons below legal drinking age
