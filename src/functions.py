@@ -7,10 +7,16 @@ Welcome to your personal wine assistant.
 I will help guide you through the often overwhelming process of selecting wine for different situations.
 Here are some basic controls for this application:-
 
-1. When prompted for your input, type in the required information/choices and press "return"/"enter".
-2. To go back to the previous step during the selection process, type in 'b' and press "return"/"enter".
-3. Emergency exit: To exit this application at any time, please press 'Ctrl+C'.
-But before we proceed, please confirm your age.
+1.  When prompted for your input, type in the required information/choices followed by "return"/"enter" to submit your input. This applies to all inputs.
+    If you've entered an invalid input, you will be prompted again to submit a new input.
+2.  Special inputs:-
+        'b' : During the selection process, submit 'b' to go back one step in the selection process.
+        'exit': Helps you exit the application. You can submit an 'exit' command at any point in the application other than a y/n step. 
+                You'll be prompted to confirm your exit by entering y/n. 
+                If 'y' is chosen, the application will exit. 
+                If 'n' is chosen, the application will continue to prompt you for information to proceed at the current step.
+                
+Let's get started!
 """
 
 def exit(x, continue_txt):
