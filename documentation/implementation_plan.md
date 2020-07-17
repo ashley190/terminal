@@ -24,12 +24,16 @@ The implementation of the application was broken down into the resource gatherin
 2. Confirmation step to enable user to confirm his/her name. This step will repeat until user confirms his/ her name. 
 
 ### Actual implementation
-Refer to [Development log](development-log.md) for a day to day log of the project implementation. Here are some highlights of the implementation of this project.
+Refer to [Development log](development_log.md) for a day to day log of the project implementation. Here are some highlights of the implementation of this project.
 As a summary, the first version of code of all three features were completed by Jul 13. An additional feature (**Feature 4**) for checking age was added on Jul 13. This feature now made up the first step of the application before prompting user for his/her name to check for whether user was above the legal drinking age of 18. 
 
 The code for version 2 was reworked several times to DRY it out on Jul 13. Further rework of Feature 2 code was done when there was time to implement an additional feature(**Feature 5**) to enable backward navigation during the selection process. In order to enable this feature, Feature 2 was reworked to while loop instead of using the original flow control (if and else statements).
 
-The winelibrary in version 3 was completed on Jul 13 and was further DRY-ed on Jul 14 by condensing the purpose and wine list into a single library. Feature 2 also required recalibration to point to the correct reference. Further organisation of the presentation of information on the app was done using the prettytables module on Jul 16. Decision to implement the final feature- **Feature 6** prior to the testing phase of the application. **Feature 6** enabled users to restart the selection process to select wines for more than one purpose. This can be repeated as many times and a summary will be printed once the user has completed all of his/her selection of wines. Implementation of Feature 6 marks the completion of the application with enough time for testing before the due date. Testing of all features were lanned for and completed on Jul 17.
+The winelibrary in version 3 was completed on Jul 13 and was further DRY-ed on Jul 14 by condensing the purpose and wine list into a single library. Feature 2 also required recalibration to point to the correct reference. Further organisation of the presentation of information on the app was done using the prettytables module on Jul 16. Decision to implement the final feature- **Feature 6** prior to the testing phase of the application. **Feature 6** enabled users to restart the selection process to select wines for more than one purpose. This can be repeated as many times and a summary will be printed once the user has completed all of his/her selection of wines. Implementation of Feature 6 marks the completion of the application with enough time for testing before the due date. 
+
+A demo video was shared with a fellow colleague for feedback and the suggestion of **Feature 7** arose. where users can type 'exit' at any point in the application to exit the app. This was successfully implemented on Jul 17.
+
+Testing of all features were planned for and completed on Jul 17. [Manual testing documentation](manual_testing)
 
 |           | MVP/Additional Feature | Due date | Resource Gathering | Coding | Testing |
 |-----------|------------------------|----------|--------------------|--------|---------|
@@ -39,12 +43,14 @@ The winelibrary in version 3 was completed on Jul 13 and was further DRY-ed on J
 | Feature 4 | Additional feature     | Jul 17   | N/A                | Jul 13 | Jul 16  |
 | Feature 5 | Additional feature     | Jul 17   | N/A                | Jul 14 | Jul 16  |
 | Feature 6 | Additional feature     | Jul 17   | N/A                | Jul 16 | Jul 16  |
+| Feature 7 | Additional feature     | Jul 17   | N/A                | Jul 17 | Jul 17  |
 
 ### Final Product
 The final product has a total of 6 features, 3 of which was not originally planned for but was deemed suitable and implementable within the time limit allowed. These features include:-
 **Feature 4** - An age checking feature that acts as a gatekeeper preventing the use of the application by person(s) under the legal drinking age of 18. 
 **Feature 5** - A move backwards navigational feature incorporated into Feature 2 allowing users to navigate backwards one step at a time all the way back to the first selection step. Users will not be able to proceed beyond the first selection step.
 **Feature 6** - Selection of multiple wines for multiple purposes enabled. All selections will be stored in the application and summarised at the end of all selections. 
+**Feature 7** - Exit function allowing user to exit at any point in the application other than at y/n steps.
 
-### Unimplemented feature
+### Feature(s) not implemented
 Curses was explored to generate interactive menus for the selection process but was unable to be implemented and tested within the given timeframe. Perhaps it may be implemented in version 2.

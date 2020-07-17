@@ -34,7 +34,7 @@ For the purposes of this project, a minimum viable product will have the followi
 *Additional functionality in this release*
 These are functionality considered optional until the minimum viable product is achieved or ideas that came up during the development process  The following are features that are implemented in the current release of the application.
 1. Age checker
-2. Suggest potential alternatives if user does not like options presented - implemented
+2. Suggest wine alternatives if user does not like options presented - implemented as part of feature 3.
 3. Allow user to undergo multiple rounds of selection to select wines for more than one purpose. If wine is selected for more than one purpose, a summary is displayed at the end for all of the user's selection before exiting the application.
 4. Enable user to exit app at any stage in the application - Users are able to type 'exit' at any point (other than y/n points) to exit the application. Changes will not be saved.
 5. Cosmetic improvements such as wine list displayed in a table and appropriate help text highlighted to improve user experience. 
