@@ -8,6 +8,8 @@ options = {
     "C" : ["\nHow much do you care about said dinner party?", "1 - Not at all. Just a courtesy bottle.", "2 - A little bit/much more than option 1"]
 }
 
+#Feature 3: Reason and wine list library. 
+#Used in results() function to reference purpose to wine list based on the code generator function output.
 summary = {
     "R1" : 
         {"Reason": "is looking for wine suitable for drinking solo.", 
@@ -90,6 +92,7 @@ summary = {
         "Wines": ["Pinot Noir", "Pinot Grigio/Gris", "Sauvignon Blanc"]}
 }
 
+#Feature 3: wine description library used in the results function to print out matching wine descriptions, food pairing options and suitable alternatives.
 description = {
     "Pinot Noir" : ["Pinot Noir is a dry, light-bodied red that has a higher acidity and a soft, smooth, low-tannin finish. It is considered a lighter bodied red that is fruity and floral.", "Pinot Noirs are particularly versatile when it comes to food pairing and can go with a variety of food, duck being a popular pairing. Other foods can range from white to red meats, dishes with cream sauces and cheese like Gruyere.", "Gamay (Beaujolais)"],
     

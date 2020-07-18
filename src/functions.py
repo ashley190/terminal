@@ -46,55 +46,8 @@ Here are some basic controls for this application:-
 Let's get started!
 """
 
-#exit function 
-def exit(x, continue_txt):
-    if x.lower() == "exit":
-        confirm = valid_y_n(input("Are you sure you want to exit this application?\n(y/n)"))
-        if confirm == "y":
-            sys.exit("Goodbye!")
-        elif confirm == "n":
-            x = input(continue_txt)
-            return x
-    else:
-        return x
-
-#age checker - no below 18s allowed. Error checked for non integers.
-def check_age(): #age check function
-    age = exit(input("Age: "),"Please enter your age to continue: ")
-
-    while not age.isnumeric():
-        age = exit(input("Please enter your age in whole numbers: "), "Please enter your age to continue: ")
-
-    if int(age) < 18: 
-        sys.exit("Come back when you're older. Goodbye!")
-    else:
-        return
-
-#name input by user and confirm. Error checking at confirm step.
-def name(): 
-    name = exit(input("Enter your name: "), "Please enter your name to continue: ")
-
-    confirm = input(f"Your name is {name}. Is this correct?\n(y/n) ")
-    confirm = confirm.lower()
-    confirm = valid_y_n(confirm, False)
-
-    while confirm == "n":
-        name = exit(input("Enter your name: "), "Please enter your name to continue: ")
-        confirm = valid_y_n(input(f"Your name is {name}. Is this correct?\n(y/n) ").lower(), False)
-    return name
-
-#prints out selection prompts from the options library, error checked for invalid options, b is allowed to go back. 
-def select(key):
-    for text in options[key]:
-        print(text)
-    user_input = valid(input("Select an option: "),len(options[key])-1)
-    if user_input == "b":
-        return user_input
-    else:
-        selection = key + user_input
-        return selection
-
-#prints out valid options and prompt user for valid input if an invalid input is entered
+#Validity checker: prints out valid options and prompt user for valid input if an invalid input is entered.
+#used to check for valid options for all numbered options.
 def valid(x, y):
     x = x.strip().lower()
     x = exit(x, "Select an option to continue: ")
@@ -114,7 +67,8 @@ def valid(x, y):
             x = input(options)
         return x
 
-#checks for valid y/n entries. True/false switch to enable 'b' as a valid entry at certain steps.
+#Validity checker: checks for valid y/n entries. True/false switch to enable 'b' as a valid entry at certain steps.
+#used to check for valid y/n or b options (where appropriate). 
 def valid_y_n(x, y=False):
     x = x.lower()    
     if y == True:
@@ -129,7 +83,31 @@ def valid_y_n(x, y=False):
             x = input("Please enter 'y' or 'n'.\n(y/n) ").lower()
         return x
 
-#generates a list of codes that can be referenced to display results. 
+#Feature 1: name input by user and confirm. Error checking at confirm step.
+def name(): 
+    name = exit(input("Enter your name: "), "Please enter your name to continue: ")
+
+    confirm = input(f"Your name is {name}. Is this correct?\n(y/n) ")
+    confirm = confirm.lower()
+    confirm = valid_y_n(confirm, False)
+
+    while confirm == "n":
+        name = exit(input("Enter your name: "), "Please enter your name to continue: ")
+        confirm = valid_y_n(input(f"Your name is {name}. Is this correct?\n(y/n) ").lower(), False)
+    return name
+
+#Feature 2: prints out selection prompts from the options library, error checked for invalid options, b is allowed to go back. 
+def select(key):
+    for text in options[key]:
+        print(text)
+    user_input = valid(input("Select an option: "),len(options[key])-1)
+    if user_input == "b":
+        return user_input
+    else:
+        selection = key + user_input
+        return selection
+
+#Feature 2 and 3: generates a list of codes that can be referenced to display results. 
 def code_gen():
     code = []
     while not code:
@@ -175,7 +153,7 @@ def code_gen():
                 code.append("R7")
             elif deserve == "b":
                 code.pop()
-#'b' behaviour coded to go back up to the first selection step. 
+#Feature 5: 'b' behaviour coded to go back up to the first selection step. 
 #Error handling used for if user tries to go beyond step 1. Message will print if trying to go back further than step 1.
         try:
             if code[-1] == "b":
@@ -192,7 +170,8 @@ def code_gen():
                     code.pop()
     return code
 
-
+#Feature 3: prints out results in a table format/ single strings in a sentence.
+#Combines information from the summary and description libraries in winelibrary.py to print out correct wines.
 def results(code, name):
     reason = summary[code[-1]]["Reason"]
     purpose = colored(summary[code[-1]]["Purpose"], attrs = ['bold', 'underline'])
@@ -217,6 +196,19 @@ def results(code, name):
         print(value)
         return purpose, value
 
+#Feature 4: age checker - no below 18s allowed. Error checked for non integers.
+def check_age(): #age check function
+    age = exit(input("Age: "),"Please enter your age to continue: ")
+
+    while not age.isnumeric():
+        age = exit(input("Please enter your age in whole numbers: "), "Please enter your age to continue: ")
+
+    if int(age) < 18: 
+        sys.exit("Come back when you're older. Goodbye!")
+    else:
+        return
+
+#Feature 6: allow user to go through selection as many times. All selections saved into a library for printing of summary.
 def wine_select(name):
     selections = {}
     wine_list = 1
@@ -234,4 +226,16 @@ def wine_select(name):
         again = again.lower()
         again = valid_y_n(again, False)
     return selections
+
+#Feature 7: exit function 
+def exit(x, continue_txt):
+    if x.lower() == "exit":
+        confirm = valid_y_n(input("Are you sure you want to exit this application?\n(y/n)"))
+        if confirm == "y":
+            sys.exit("Goodbye!")
+        elif confirm == "n":
+            x = input(continue_txt)
+            return x
+    else:
+        return x
 
