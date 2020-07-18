@@ -26,10 +26,10 @@
 * [README](yokemeilam-T1A3-README.md) - Contains all documentation other than the development log. This includes the software development plan, implementation plan and testing documentation. 
 * [Development log](yokemeilam-T1A3-development_log.md) - contains daily log of activities during the developemtn of this application. 
 * [docs](yokemeilam-T1A3-docs) - contain all images and resources referenced on README.
-* [src](yokemeilam-T1A3-src) - source code of the application containing three modules:-
-    *  [main.py](yokemeilam-T1A3-src/main.py) - executable file for the application.
-    * [functions.py](yokemeilam-T1A3-src/functions.py) - contains all functions written for the application.
-    * [winelibrary.py](yokemeilam-T1A3-src\winelibrary.py) - contains all libraries referenced in functions.py
+* [src](src) - source code of the application containing three modules:-
+    *  [main.py](src\main.py) - executable file for the application.
+    * [functions.py](src\functions.py) - contains all functions written for the application.
+    * [winelibrary.py](src\winelibrary.py) - contains all libraries referenced in functions.py
 
 ## Software Development Plan - Personal Wine Assistant Terminal Application
 ### Statement of Purpose and Scope
