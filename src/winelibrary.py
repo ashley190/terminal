@@ -24,7 +24,7 @@ summary = {
     "NBW" : {
         "Reason" : "is looking for wine suitable for a simple dinner at home.",
         "Purpose": "Wines suitable for simple home dinners.",
-        "Wines": ["Pinot Noir", "Sangiovese/Grenache", "Zinfandel/Shiraz"]},
+        "Wines": ["Pinot Noir", "Sangiovese/Grenache", "Zinfandel", "Shiraz"]},
 
     "D2" : {
         "Reason" : "is looking for wine suitable for cooking and drinking.", 
