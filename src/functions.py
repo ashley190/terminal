@@ -3,12 +3,14 @@ from winelibrary import *
 from termcolor import colored, cprint
 from prettytable import PrettyTable
 
+#termcolor definition of key words 
 text_1 = colored("'return'/'enter'", 'blue', attrs=['bold', 'underline'])
 text_2 = colored("b", 'blue', attrs=['bold', 'underline'])
 text_3 = colored("exit", 'blue', attrs=['bold', 'underline'])
 text_4 = colored("y", 'blue', attrs=['bold', 'underline'])
 text_5 = colored("n", 'blue', attrs=['bold', 'underline'])
 
+#text for --about argument on Terminal
 about_txt = f"""
     Application: The Personal Wine Assistant
     Creator: Ashley Lam
@@ -17,6 +19,7 @@ about_txt = f"""
     Credits: Wine Folly wine selection chart(https://media.winefolly.com/how-to-choose-wine-infographic.png#fullsize)
         """
 
+#text for --help argument on Terminal
 help_txt = f"""
 The application will prompt for input at each step. Type in your input and press {text_1} at each point.
 
@@ -25,7 +28,7 @@ b:      During the wine selection process, entering {text_2} will enable steppin
             {text_2} can continually be used all the way up to the first selection question.
         """
 
-
+#welcome text on main.py
 welcome = f"""
 {colored("Welcome to your personal wine assistant.", attrs=['dark','underline'])} 
 I will help guide you through the often overwhelming process of selecting wine for different situations.
@@ -43,6 +46,7 @@ Here are some basic controls for this application:-
 Let's get started!
 """
 
+#exit function 
 def exit(x, continue_txt):
     if x.lower() == "exit":
         confirm = valid_y_n(input("Are you sure you want to exit this application?\n(y/n)"))
@@ -54,6 +58,7 @@ def exit(x, continue_txt):
     else:
         return x
 
+#age checker - no below 18s allowed. Error checked for non integers.
 def check_age(): #age check function
     age = exit(input("Age: "),"Please enter your age to continue: ")
 
@@ -65,6 +70,7 @@ def check_age(): #age check function
     else:
         return
 
+#name input by user and confirm. Error checking at confirm step.
 def name(): 
     name = exit(input("Enter your name: "), "Please enter your name to continue: ")
 
@@ -77,6 +83,7 @@ def name():
         confirm = valid_y_n(input(f"Your name is {name}. Is this correct?\n(y/n) ").lower(), False)
     return name
 
+#prints out selection prompts from the options library, error checked for invalid options, b is allowed to go back. 
 def select(key):
     for text in options[key]:
         print(text)
@@ -87,7 +94,7 @@ def select(key):
         selection = key + user_input
         return selection
 
-
+#prints out valid options and prompt user for valid input if an invalid input is entered
 def valid(x, y):
     x = x.strip().lower()
     x = exit(x, "Select an option to continue: ")
@@ -107,6 +114,7 @@ def valid(x, y):
             x = input(options)
         return x
 
+#checks for valid y/n entries. True/false switch to enable 'b' as a valid entry at certain steps.
 def valid_y_n(x, y=False):
     x = x.lower()    
     if y == True:
@@ -121,6 +129,7 @@ def valid_y_n(x, y=False):
             x = input("Please enter 'y' or 'n'.\n(y/n) ").lower()
         return x
 
+#generates a list of codes that can be referenced to display results. 
 def code_gen():
     code = []
     while not code:
@@ -166,6 +175,8 @@ def code_gen():
                 code.append("R7")
             elif deserve == "b":
                 code.pop()
+#'b' behaviour coded to go back up to the first selection step. 
+#Error handling used for if user tries to go beyond step 1. Message will print if trying to go back further than step 1.
         try:
             if code[-1] == "b":
                 code.pop()
@@ -181,10 +192,10 @@ def code_gen():
                     code.pop()
     return code
 
+
 def results(code, name):
     reason = summary[code[-1]]["Reason"]
     purpose = colored(summary[code[-1]]["Purpose"], attrs = ['bold', 'underline'])
-    # print(f"\n{name} {reason}\n")
 
     wine_list = summary[code[-1]]["Wines"]
 

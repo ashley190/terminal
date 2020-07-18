@@ -1,3 +1,4 @@
+#used by select and valid functions to display prompts for the selection process
 options = {
     "W" : ["\nAre you choosing this for yourself or for someone else?", "1 - wine for myself", "2 - wine for someone else"],
     "R" : ["\nTell me more. Is this for:-", "1 - Drinking solo", "2 - To go with my dinner", "3 - Looking for a celebratory drink", "4 - Just want something suitable for regular drinking", "5 - Looking for something to cellar"],

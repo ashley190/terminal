@@ -22,7 +22,7 @@ The intended target audience of this application is for people who:-
 1. Open up the Terminal
 2. Navigate to the 'yokemeilam_T1A3/src' folder
 3. Type in the command:
-    `python main.py`
+    `./main.py`
 
 ### Using the Application
 1. A welcome message will be printed to the user's terminal with a basic user guide 
